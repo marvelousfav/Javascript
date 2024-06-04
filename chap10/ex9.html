@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Exercise 10.9</title>
+</head>
+<body>
+    <div>
+        <button>dad</button>
+        <button>mom</button>
+        <button>siblings</button>
+    </div>
+    <script>
+        const btns = document.querySelectorAll("button");
+        btns.forEach((btn)=>{
+            function output(){
+                console.log(this.textContent);
+            }
+            btn.addEventListener("click",output);
+        });
+    </script>
+
+</body>
+</html>

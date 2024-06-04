@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+   <title>11.4</title>
+</head>
+<body>
+   <div class="output"></div> 
+   <script>
+const output = document.querySelector(".output");
+       output.textContent = "hello world";
+       output.style.height = "200px";
+       output.style.width = "400px";
+       output.style.backgroundColor = "red";
+       output.addEventListener("mousedown", function (e) {
+           message("pink", e);
+       });
+       output.addEventListener("mouseover", function (e) {
+           message("red", e);
+       });
+       output.addEventListener("mouseout", function (e) {
+           message("blue", e);
+       });
+       output.addEventListener("mouseup", function (e) {
+           message("green", e);
+       });
+function message(elColor, event) {
+console.log(event.type);
+           output.style.backgroundColor = elColor;
+       }
+   </script>
+</body>
+</html>
